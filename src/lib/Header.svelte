@@ -3,10 +3,10 @@
 </script>
 
 <script>
-  export let blogTitle = "Azmi's Blog";
+  export let blogTitle = 'Azmi Blog'
 
   let path
-  $: ({path} = $page)
+  $: ({path} = $page.url.pathname)
 </script>
 
 <header>
