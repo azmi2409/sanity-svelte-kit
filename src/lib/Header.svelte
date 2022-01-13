@@ -3,7 +3,7 @@
 </script>
 
 <script>
-  export let blogTitle = 'Azmi Blog'
+  export let blogTitle = "Azmi's Site";
 
   let path
   $: ({path} = $page.url.pathname)
@@ -14,6 +14,9 @@
   <nav>
     <ul>
       <li><a data-selected={path === '/'} href="/">Home</a></li>
+      <li><a data-selected={path === '/'} href="/">Portofolio</a></li>
+      <li><a data-selected={path === '/'} href="/">Blog</a></li>
+      <li><a data-selected={path === '/'} href="/">Contact Me</a></li>
     </ul>
   </nav>
 </header>
