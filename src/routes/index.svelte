@@ -21,7 +21,7 @@
 </script>
 
 <svelte:head>
-  <title>Blog</title>
+  <title>Azmi's Blog</title>
 </svelte:head>
 
 <h1>Recent posts</h1>
