@@ -14,7 +14,7 @@
   "devDependencies": {
     "@portabletext/svelte": "^0.2.0",
     "@sveltejs/adapter-netlify": "^1.0.0-next.36",
-    "@sveltejs/kit": "1.0.0-next.208",
+    "@sveltejs/kit": "1.0.0-next.229",
     "eslint": "^8.4.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-svelte3": "^3.2.1",
