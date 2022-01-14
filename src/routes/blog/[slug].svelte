@@ -54,7 +54,7 @@
   </div>
   {/if}
   <div class="row justify-content-center">
-    <article class="blog-post col-10 px-3 py-2">
+    <article class="blog-post col-lg-8 col-md-10 py-2">
       <PortableText
         blocks={post.body}
         serializers={{
