@@ -23,7 +23,7 @@
 </CardHeader>
   {#if post.image}
   <CardBody>
-    <div class="image border-0 rounded-3">
+    <div class="image">
       <SanityImage image={post.image} maxWidth={300} />
     </div>
   </CardBody>

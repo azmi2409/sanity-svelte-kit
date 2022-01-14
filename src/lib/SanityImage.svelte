@@ -21,7 +21,7 @@
 
 {#if image}
   <img
-    class="border-0 rounded-3 mb-3 py-3 img-fluid"
+    class="mb-3 py-3 img-fluid"
     loading="lazy"
     src={urlFor(image).width(maxWidth).fit('fillmax')}
     alt={alt || image.alt || ''}

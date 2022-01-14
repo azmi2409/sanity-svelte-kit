@@ -26,8 +26,8 @@
   }
   span :global(img) {
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 80px;
+    height: 80px;
     object-fit: cover;
     margin: 0;
   }

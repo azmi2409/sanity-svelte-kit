@@ -47,9 +47,11 @@
   </p>
 
   {#if post.image}
-    <div class="d-flex justify-content-center">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-10">
       <SanityImage image={post.image} />
     </div>
+  </div>
   {/if}
   <div class="row justify-content-center">
     <article class="blog-post col-10 px-3 py-2">
