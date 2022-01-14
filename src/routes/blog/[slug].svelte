@@ -35,7 +35,7 @@
   <title>{post.title}</title>
 </svelte:head>
 <div class="container bg-light py-5">
-  <div class="d-flex justify-content-center">
+  <div class="d-md-flex d-lg-flex justify-content-center">
     <h1>{post.title}</h1>
   </div>
   <p class="d-flex justify-content-center mb-3 blog-post-meta">
