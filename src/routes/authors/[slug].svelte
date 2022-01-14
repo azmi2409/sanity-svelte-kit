@@ -32,7 +32,7 @@
 
   export let author
 </script>
-
+<div class="container bg-light">
 <h1>{author.name}</h1>
 
 {#if author.image}
@@ -58,3 +58,4 @@
 <h2>Posts by {author.name}</h2>
 
 <PostsGrid posts={author.posts} />
+</div>
