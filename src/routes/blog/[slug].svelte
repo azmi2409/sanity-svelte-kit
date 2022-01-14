@@ -34,36 +34,41 @@
 <svelte:head>
   <title>{post.title}</title>
 </svelte:head>
+<div class="container bg-light py-5">
+  <div class="d-flex justify-content-center">
+    <h1>{post.title}</h1>
+  </div>
+  <p class="d-flex justify-content-center mb-3 blog-post-meta">
+    Published {new Date(post.publishedAt).toLocaleDateString('en', {
+      month: 'long',
+      day: '2-digit',
+      year: 'numeric'
+    })}
+  </p>
 
-<h1>{post.title}</h1>
-<p>
-  Published {new Date(post.publishedAt).toLocaleDateString('en', {
-    month: 'long',
-    day: '2-digit',
-    year: 'numeric'
-  })}
-</p>
-
-{#each post.authors || [] as author}
-  <AuthorCard {author} />
-{/each}
-
-<hr />
-
-{#if post.image}
-  <SanityImage image={post.image} />
-{/if}
-
-<PortableText
-  blocks={post.body}
-  serializers={{
-    types: {
-      code: Code,
-      image: ImageBlock,
-      authorReference: AuthorBlock
-    },
-    marks: {
-      link: Link
-    }
-  }}
-/>
+  {#if post.image}
+    <div class="d-flex justify-content-center">
+      <SanityImage image={post.image} />
+    </div>
+  {/if}
+  <div class="row justify-content-center">
+    <article class="blog-post col-10 px-3 py-2">
+      <PortableText
+        blocks={post.body}
+        serializers={{
+          types: {
+            code: Code,
+            image: ImageBlock,
+            authorReference: AuthorBlock
+          },
+          marks: {
+            link: Link
+          }
+        }}
+      />
+      {#each post.authors || [] as author}
+        <AuthorCard {author} />
+      {/each}
+    </article>
+  </div>
+</div>

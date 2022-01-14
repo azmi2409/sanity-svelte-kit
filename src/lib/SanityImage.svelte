@@ -2,7 +2,7 @@
   import {urlFor} from './sanityClient'
 
   export let image
-  export let maxWidth = 1200
+  export let maxWidth = 800
   export let alt = undefined
 
   // Example image document ID: image-cc93b69600f5cd1abce97fd0d4aa71793dbbba76-1350x900-png
@@ -21,6 +21,7 @@
 
 {#if image}
   <img
+    class="border-0 rounded-3 mb-3 py-3"
     loading="lazy"
     src={urlFor(image).width(maxWidth).fit('fillmax')}
     alt={alt || image.alt || ''}

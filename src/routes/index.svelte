@@ -17,7 +17,6 @@
   import PostsGrid from '$lib/PostsGrid.svelte'
 
   export let posts
-  export let authors
 </script>
 
 <svelte:head>
