@@ -1,4 +1,4 @@
-<footer>
+<footer class="container bg-light py-5 my-0">
   <a href="https://sanity.io">
     <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"
       ><rect width="28" height="28" rx="3" fill="#F03E2F" /><path

@@ -1,19 +1,35 @@
 <script>
-  import SanityImage from './SanityImage.svelte'
+  import SanityImage from './SanityImage.svelte';
+  import {
+    Button,
+    Card,
+    CardBody,
+    CardFooter,
+    CardHeader,
+    CardSubtitle,
+    CardText,
+    CardTitle
+  } from 'sveltestrap';
 
   export let post
 </script>
 
+<Card body color="light" class="mb-3 border-0">
 <article>
-  <h2>
+  <CardHeader class="bg-light border-0">
+    <CardTitle class="py-3 bg-light">
     <a rel="prefetch" href="/blog/{post.slug.current}">{post.title}</a>
-  </h2>
+</CardTitle>
+</CardHeader>
   {#if post.image}
-    <div class="image">
+  <CardBody>
+    <div class="image border-0 rounded-3">
       <SanityImage image={post.image} maxWidth={300} />
     </div>
+  </CardBody>
   {/if}
 </article>
+</Card>
 
 <style>
   article {

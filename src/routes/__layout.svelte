@@ -1,11 +1,12 @@
 <script>
+  import 'bootstrap/dist/css/bootstrap.min.css';
   import Header from '$lib/Header.svelte'
   import Footer from '$lib/Footer.svelte'
 </script>
 
 <Header/>
 
-<main style="padding: 1em">
+<main>
   <slot />
 </main>
 
@@ -13,7 +14,7 @@
 
 <style>
   :global(a) {
-    color: #1a4d9e;
+    color: black;
   }
   :global(a:hover) {
     color: #1e61cd;

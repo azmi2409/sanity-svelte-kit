@@ -13,7 +13,7 @@
 </script>
 
 <script>
-  import AuthorCard from '$lib/AuthorCard.svelte'
+  import { Badge } from 'sveltestrap';
   import PostsGrid from '$lib/PostsGrid.svelte'
 
   export let posts
@@ -24,12 +24,9 @@
   <title>Azmi's Blog</title>
 </svelte:head>
 
-<h1>Recent posts</h1>
-
+<div class="container bg-light py-5 my-0">
+  <div class="d-flex justify-content-center">
+<h1>Recent posts   </h1><h2><Badge pill>New</Badge></h2>
+</div>
 <PostsGrid {posts} />
-
-<h2 style="margin-top: 4rem">Author{authors.length > 1 ? 's' : ''}</h2>
-
-{#each authors as author}
-  <AuthorCard {author} />
-{/each}
+</div>
