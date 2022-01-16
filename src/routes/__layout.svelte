@@ -14,10 +14,18 @@
 
 <style>
   :global(a) {
-    color: black;
+    color: #040320;
+    text-decoration: none;
   }
   :global(a:hover) {
-    color: #1e61cd;
+    color: #05c46b;
     border-bottom: none;
+    text-decoration: underline;
+  }
+  :global(.container) {
+    background-color: #f5f5f5 !important;
+  }
+  :global(img:hover) {
+    transform: scale(1.1);
   }
 </style>

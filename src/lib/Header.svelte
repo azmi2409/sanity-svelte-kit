@@ -23,7 +23,7 @@ function handleUpdate(event) {
   $: ({path} = $page.url.pathname)
 </script>
 <header class="container bg-light">
-  <Navbar color="light" light expand="md">
+  <Navbar light expand="md">
     <NavbarBrand class="px-5 ms-auto" data-selected={path === '/'} href="/">{blogTitle}</NavbarBrand>
     <NavbarToggler on:click={() => (isOpen = !isOpen)} />
     <Collapse {isOpen} navbar expand="md" on:update={handleUpdate}>

@@ -1,5 +1,8 @@
 <script>
+import { loop_guard } from 'svelte/internal';
+
   import {urlFor} from './sanityClient'
+  import loading from '../assets/loading.gif'
 
   export let image
   export let maxWidth = 800
@@ -23,9 +26,9 @@
   <img
     class="mb-3 py-3 img-fluid"
     loading="lazy"
-    src={urlFor(image).width(maxWidth).fit('fillmax')}
+    src={loaded ? urlFor(image).width(maxWidth).fit('fillmax') : loading}
     alt={alt || image.alt || ''}
-    style="aspect-ratio: {aspectRatio}; opacity: {loaded ? 1 : 0}; transition: .2s opacity;"
-    on:load={() => (loaded = true)}
+    style="aspect-ratio: {aspectRatio}; transition: .2s opacity;"
+    on:loading={console.log('Loading')} on:load={() => (loaded = true)}
   />
 {/if}
