@@ -5,6 +5,7 @@ node_modules
 /package
 .env
 .netlify
+yarn.lock
 
 # The studio will be built in static/studio, which shouldn't be commited
 /static/studio
