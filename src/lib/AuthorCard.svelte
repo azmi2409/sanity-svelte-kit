@@ -25,10 +25,9 @@
     vertical-align: middle;
   }
   span :global(img) {
-    border-radius: 50%;
     width: 80px;
     height: 80px;
-    object-fit: cover;
+    object-fit: contain;
     margin: 0;
   }
 </style>

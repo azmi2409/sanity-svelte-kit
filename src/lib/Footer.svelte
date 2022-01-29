@@ -12,7 +12,4 @@
     justify-content: center;
     gap: 1em;
   }
-  svg {
-    width: 50px;
-  }
 </style>

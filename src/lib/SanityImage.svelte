@@ -1,8 +1,32 @@
 <script>
-import { loop_guard } from 'svelte/internal';
+  import {urlFor} from './sanityClient';
 
-  import {urlFor} from './sanityClient'
-  import loading from '../assets/loading.gif'
+  import { spring } from 'svelte/motion';
+	
+	let isBooped = false;
+	export let rotation = 10;
+	export let timing = 200;
+	
+	let springyRotation = spring(0, {
+		stiffness: 0.1,
+		damping: 0.15
+	});
+	
+	$: springyRotation.set(isBooped ? rotation : 0);
+	
+	$: style = `
+		display: inline-block;
+		transform: rotate(${$springyRotation}deg);
+	`;	
+
+	$: if (isBooped) {		
+		window.setTimeout(() => {isBooped = false}, timing);
+	}
+	
+	function triggerBoop() {
+		isBooped = true;
+	}
+
 
   export let image
   export let maxWidth = 800
@@ -19,16 +43,17 @@ import { loop_guard } from 'svelte/internal';
   $: aspectRatio = width / height
 
   // Once loaded, the image will transition to full opacity
-  let loaded = false
+  $: loaded = false
 </script>
 
 {#if image}
   <img
+  on:mouseenter={triggerBoop}
     class="mb-3 py-3 img-fluid"
     loading="lazy"
-    src={loaded ? urlFor(image).width(maxWidth).fit('fillmax') : loading}
+    src={urlFor(image).width(maxWidth).fit('fillmax')}
     alt={alt || image.alt || ''}
-    style="aspect-ratio: {aspectRatio}; transition: .2s opacity;"
+    style="{style}aspect-ratio: {aspectRatio};filter: opacity({loaded?1:0}) transition: .2s opacity;"
     on:loading={console.log('Loading')} on:load={() => (loaded = true)}
   />
 {/if}

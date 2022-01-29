@@ -1,13 +1,9 @@
 <script>
   import SanityImage from './SanityImage.svelte';
   import {
-    Button,
     Card,
     CardBody,
-    CardFooter,
     CardHeader,
-    CardSubtitle,
-    CardText,
     CardTitle
   } from 'sveltestrap';
 
@@ -18,7 +14,7 @@
 <article>
   <CardHeader class="bg-light border-0">
     <CardTitle class="py-3 bg-light">
-    <a rel="prefetch" href="/blog/{post.slug.current}">{post.title}</a>
+    <a rel="prefetch" sveltekit:prefetch href="/blog/{post.slug.current}">{post.title}</a>
 </CardTitle>
 </CardHeader>
   {#if post.image}

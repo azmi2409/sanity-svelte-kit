@@ -25,7 +25,4 @@
   :global(.container) {
     background-color: #f5f5f5 !important;
   }
-  :global(img:hover) {
-    transform: scale(1.1);
-  }
 </style>
