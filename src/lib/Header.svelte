@@ -1,30 +1,52 @@
 <script context="module">
-  import {page} from '$app/stores';
-  import {
-    Collapse,
-    Navbar,
-    NavbarToggler,
-    NavbarBrand,
-    Nav,
-    NavItem,
-    NavLink,
-  } from 'sveltestrap';
+  import {page} from '$app/stores'
+  import {Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink} from 'sveltestrap'
 </script>
 
 <script>
-  let isOpen = false;
+  let isOpen = false
 
-function handleUpdate(event) {
-  isOpen = event.detail.isOpen;
-}
-  export let blogTitle = "Azmi's Site";
+  function handleUpdate(event) {
+    isOpen = event.detail.isOpen
+  }
 
   let path
   $: ({path} = $page.url.pathname)
 </script>
-<header class="container bg-light">
+
+<header class="container sticky-top">
   <Navbar light expand="md">
-    <NavbarBrand class="px-5 ms-auto" data-selected={path === '/'} href="/">{blogTitle}</NavbarBrand>
+    <NavbarBrand class="px-5 ms-auto d-flex flex-row" data-selected={path === '/'} href="/">
+      <div class="px-2">
+        <svg
+          viewBox="0 0 200 200"
+          width="30px"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:anim="http://www.w3.org/2000/anim"
+          anim=""
+          anim:transform-origin="50% 50%"
+          anim:duration="0.5"
+          anim:ease="power1.inOut"
+        >
+          <g class="group" id="3a0dee9db8289dfe34d06afbf067c346">
+            <path
+              id="white-circle"
+              d="M156.482 17.4786C145.645 10.0613 133.454 4.85108 120.603 2.14545C107.753 -0.560187 94.4951 -0.708244 81.5874 1.70973C68.6798 4.1277 56.3748 9.06435 45.3749 16.2378C34.3751 23.4113 24.896 32.6811 17.4786 43.5179C10.0613 54.3548 4.85108 66.5465 2.14545 79.3969C-0.560187 92.2474 -0.708244 105.505 1.70973 118.413C4.1277 131.32 9.06435 143.625 16.2378 154.625C23.4113 165.625 32.6811 175.104 43.5179 182.521L100 100L156.482 17.4786Z"
+              fill="white"
+            />
+            <path
+              id="black-circle"
+              d="M43.5179 182.521C54.3548 189.939 66.5465 195.149 79.3969 197.855C92.2474 200.56 105.505 200.708 118.413 198.29C131.32 195.872 143.625 190.936 154.625 183.762C165.625 176.589 175.104 167.319 182.521 156.482C189.939 145.645 195.149 133.454 197.855 120.603C200.56 107.753 200.708 94.4951 198.29 81.5874C195.872 68.6798 190.936 56.3747 183.762 45.3749C176.589 34.3751 167.319 24.896 156.482 17.4786L100 100L43.5179 182.521Z"
+              fill="#181515"
+            />
+            <path id="white-triangle" d="M157 76L167.392 94H146.608L157 76Z" fill="white" />
+            <path id="black-triangle" d="M43 100L53.3923 118H32.6077L43 100Z" fill="#181515" />
+          </g>
+        </svg>
+      </div>
+      <div class="text-white">Azmi Muwahid</div>
+    </NavbarBrand>
     <NavbarToggler on:click={() => (isOpen = !isOpen)} />
     <Collapse {isOpen} navbar expand="md" on:update={handleUpdate}>
       <Nav class="ms-auto px-5" navbar>
@@ -44,3 +66,9 @@ function handleUpdate(event) {
     </Collapse>
   </Navbar>
 </header>
+
+<style>
+  header {
+    color: whitesmoke
+  }
+</style>

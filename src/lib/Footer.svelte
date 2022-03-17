@@ -1,15 +1,15 @@
-<footer class="container bg-light py-5 my-0">
+<footer class="d-flex">
   <p>Copyright &copy; 2022 Azmi.web.id</p>
 </footer>
 
 <style>
   footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     text-align: center;
-    margin-top: 10vh;
-    margin-bottom: 10vh;
-    display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1em;
+    color: whitesmoke
   }
 </style>

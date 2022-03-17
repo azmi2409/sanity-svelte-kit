@@ -13,16 +13,12 @@
 <Footer />
 
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+  :global(body) {
+    background-color: black !important;
+    font-family: Space Grotesk, sans-serif;
+  }
   :global(a) {
-    color: #040320;
-    text-decoration: none;
-  }
-  :global(a:hover) {
-    color: #05c46b;
-    border-bottom: none;
-    text-decoration: underline;
-  }
-  :global(.container) {
-    background-color: #f5f5f5 !important;
+    color: whitesmoke !important
   }
 </style>

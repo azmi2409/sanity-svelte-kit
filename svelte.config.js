@@ -1,11 +1,12 @@
 import adapter from '@sveltejs/adapter-netlify'
+import svg from '@poppanator/sveltekit-svg'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
   kit: {
-    target: '#svelte',
     adapter: adapter(),
     vite: {
+      plugins: [svg()],
       server: {
         fs: {
           allow: ['studio']

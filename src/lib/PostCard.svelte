@@ -10,7 +10,7 @@
   export let post
 </script>
 
-<Card body color="light" class="mb-3 border-0">
+<Card body color="dark" class="mb-3 border-0">
 <article>
   <CardHeader class="bg-light border-0">
     <CardTitle class="py-3 bg-light">
