@@ -18,7 +18,7 @@
       <Svg />
       <div
         class="d-flex mx-2 p-5 flex-wrap justify-content-center align-content-center align-self-center align-items-center"
-        style="cursor: pointer; min-height: 100%; position:absolute; top:0; left:0; right:0;"
+        style="min-height: 100%; position:absolute; top:0; left:0; right:0;"
       >
         {#each heading as head}
           {#each head.split('') as letter}
@@ -30,7 +30,7 @@
               }}
               let:motion
             >
-              <h1 use:motion>{letter}</h1>
+              <h1 style="cursor: pointer;" use:motion>{letter}</h1>
             </Motion>
           {/each}
           {#if head == ' '}
