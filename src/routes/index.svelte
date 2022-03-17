@@ -9,7 +9,7 @@
 
 <svelte:window bind:scrollY={y} />
 <svelte:head>
-  <title>Azmi Muwahid Web Dev</title>
+  <title>Azmi's Personal Website</title>
 </svelte:head>
 
 <div class="container">
@@ -48,13 +48,41 @@
     min-height: 80vh;
   }
   h1 {
-    background: -webkit-linear-gradient(#eee, #333);
+    background: linear-gradient(160deg, #ff7e00, #ffffff, #5cff00);
+    background-size: 200% 120%;
     font-size: 4em;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    -webkit-animation: gradient 5s ease infinite;
+    animation: gradient 5s ease infinite;
+    animation-direction: reverse;
   }
   h1:hover {
     -webkit-text-fill-color: #eee;
+  }
+
+  @-webkit-keyframes gradient {
+    0% {
+      background-position: 10% 0%;
+    }
+    50% {
+      background-position: 91% 100%;
+    }
+    100% {
+      background-position: 10% 0%;
+    }
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 10% 0%;
+    }
+    50% {
+      background-position: 91% 100%;
+    }
+    100% {
+      background-position: 10% 0%;
+    }
   }
 </style>
