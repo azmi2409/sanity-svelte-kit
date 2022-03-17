@@ -367,6 +367,6 @@
       left: 0;
       right: 0;
       bottom: 0;
-      max-height: 70vh;
+      max-height: 80vh;
     }
   </style>

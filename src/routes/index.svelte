@@ -48,8 +48,8 @@
     min-height: 80vh;
   }
   h1 {
-    font-size: 64px;
     background: -webkit-linear-gradient(#eee, #333);
+    font-size: 4em;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
